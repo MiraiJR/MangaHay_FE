@@ -1,0 +1,101 @@
+.chapterdetail
+    background-color: var(--color-black)
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    box-shadow: 0 0 20px 10px var(--color-gray-bold)
+    div
+
+        margin-bottom: 5px
+        img
+            width: 100%
+            object-fit: contain
+
+.comicinformationparent
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 30px
+
+.comicinformation
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    border: 1px solid var(--color-gray-bold)
+    margin-top: 250px
+    padding: 100px 200px 20px 200px
+    background-color: var(--color-black)
+    border-radius: 10px
+    box-shadow: 0 0 10px 3px var(--color-gray-bold)
+    *
+        color: var(--color-white)
+    &__thumb
+        img
+            width: 200px
+            object-fit: cover
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%, -70%)
+            box-shadow: 0 0 10px 3px var(--color-gray-bold)
+    &__name
+        font-weight: 600
+        margin: 5px 0
+        text-decoration: underline
+    &__chapter
+        background-color: var(--color-gray-bold)
+        color: var(--text-dark-color)
+        padding: 5px
+        border-radius: 10px
+        margin: 5px 0
+
+.menunavigatechapter
+    display: flex
+    width: 100%
+    justify-content: space-around
+    align-items: center
+    background-color: var(--color-black)
+    color: var(--text-light-color)
+    padding: 20px 0
+    margin: 30px 0
+    *
+        width: 100%
+        cursor: pointer
+        font-size: var(--font-bigger-large)
+
+    *:hover
+        color: var(--color-red)
+    a
+        color: var(--text-light-color)
+
+.menuchapter
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    background-color: var(--color-black)
+    color: var(--text-light-color)
+    padding: 10px 0
+    overflow: scroll
+    animation: 0.2s linear appearMenuChapter
+    &__item
+        display: block
+        padding: 10px 60px
+        cursor: pointer
+        transition: 0.1s linear
+        color: var(--text-light-color)
+    &__item-active
+        background-color: var(--color-viewed-notify)
+        color: var(--text-dark-color)
+    &__item:hover
+        background-color: var(--color-viewed-notify)
+        color: var(--text-dark-color)
+    
+@keyframes appearMenuChapter
+    from
+        transform: translateX(-100%)
+    to 
+        transform: translateX(0)

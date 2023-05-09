@@ -1,0 +1,183 @@
+.userpage
+    display: flex
+    height: 100%
+
+.menuleft
+    display: flex
+    flex-direction: column
+    justify-items: left
+    background-color: var(--color-black)
+    min-height: 100vh
+    color: var(--text-blur)
+    padding: 20px
+    box-shadow: 2px 0 10px 3px var(--color-gray-bold)
+    position: relative
+
+    a
+        img
+            background-color: var(--color-white)
+            box-shadow: 0 3px 10px 3px var(--color-orange)
+    &__title
+        text-transform: uppercase
+        padding: 20px 0
+        margin-left: 10px
+        border-bottom: 1px solid var(--color-gray-bold)
+    &__option-active
+        color: var(--text-light-color)
+        background-color: var(--color-orange)
+    &__option-item
+        padding: 20px
+        cursor: pointer
+        display: flex
+        align-items: center
+        transition: 0.15s linear
+        border-radius: 10px
+        color: var(--text-light-color)
+        span
+            margin-left: 10px
+
+    &__option-item:hover
+        color: var(--text-light-color)
+        background-color: var(--color-orange)
+
+.contentright
+    width: 100%
+    display: flex
+    flex-direction: column
+
+.contentrightheader
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: var(--color-black)
+    color: var(--text-light-color)
+    padding: 10px 20px
+    border-left: 1px solid var(--color-white)
+    div
+        display: flex
+        align-items: center
+        cursor: pointer
+        img
+            height: 60px
+            width: 60px
+            object-fit: cover
+            object-position: top
+            border-radius: 100%
+            margin-left: 10px
+    div:nth-child(1)
+        font-size: var(--font-super)
+
+.contentrightfooter
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: var(--color-black)
+    color: var(--text-light-color)
+    padding: 10px 20px
+    border-left: 1px solid var(--color-white)
+    div
+        strong
+            color: var(--color-orange)
+
+.userprofile
+    position: relative
+    margin: 20px
+    &__header
+        display: flex
+        flex-direction: column
+        position: relative
+        padding-bottom: 70px
+        background-color: var(--color-black)
+        color: var(--text-light-color)
+    &__wallpaper
+        position: relative
+        img
+            height: 250px
+            width: 100%
+            object-fit: cover
+        div
+            font-size: 40px
+            position: absolute
+            bottom: 0
+            right: 0
+            margin: 20px
+            cursor: pointer
+            transition: 0.15s linear
+            color: var(--color-orange)
+        div:hover
+            color: var(--color-viewed-notify)
+    &__avatar
+        display: flex
+        align-items: flex-end
+        position: absolute
+        bottom: 0
+        transform: translate(0, -15%)
+        margin: 0 20px
+        &-1
+            position: relative
+            img
+                height: 200px
+                width: 200px
+                border-radius: 10px
+                object-fit: cover
+                object-position: top
+            div
+                position: absolute
+                bottom: 0
+                right: 0
+                margin: 10px
+                color: var(--color-orange)
+                cursor: pointer
+                transition: 0.15s linear
+            div:hover
+                color: var(--color-viewed-notify)
+        &-2
+            display: flex
+            flex-direction: column
+            margin-left: 20px
+            text-align: center
+            width: fit-content
+            span:nth-child(1)
+                margin-bottom: 20px
+            span:nth-child(2)
+                background-color: var(--color-green)
+                padding: 2px
+                border-radius: 2px
+/* upload image */
+.boxuploadimage
+    position: absolute
+    left: 0
+    right: 0
+    top: 50%
+    transform: translateY(-25%)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+    padding: 50px
+    width: max-content
+    margin: auto
+    background-color: black
+    z-index: 1000
+    border-radius: 10px
+    box-shadow: 0 0 10px 5px var(--color-gray-bold)
+
+.uploadimage
+    cursor: pointer
+    padding: 10px
+    background-color: var(--color-orange)
+    border-radius: 10px
+    margin-bottom: 20px
+    input
+        display: none
+#uploadimage-preview
+    img
+        border-radius: 10px
+        height: 200px
+        width: 200px
+        object-fit: cover
+
+.button-oke
+    margin-top: 20px
+    background-color: var(--color-blue)

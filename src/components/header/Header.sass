@@ -1,0 +1,251 @@
+#app__header
+    background-color: var(--background-color)
+    color: var(--text-light-color)
+
+    &-modify
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+
+.left
+    display: flex
+    align-items: center
+
+    &__list
+        display: flex
+        align-items: center
+        list-style: none
+
+        *
+            color: var(--text-light-color)
+
+    &__list .list__item
+        margin: 10px 20px
+        font-size: var(--font-normal)
+        font-weight: 700
+        cursor: pointer
+        position: relative
+
+    &__list .item__icon
+        padding-right: 10px
+
+    &__list .list__item::after
+        content: ""
+        width: 0%
+        background-color: var(--color-white)
+        height: 3px
+        position: absolute
+        bottom: 0
+        left: 0
+        transform: translateY(400%)
+
+.menugenres
+    // width: max-content
+    background-color: var(--color-white)
+    position: absolute
+    padding: 20px 20px
+    border-radius: 10px
+    top: 90%
+    left: 0
+    z-index: 1000
+    box-shadow: 0 0 10px 3px var(--color-gray-bold)
+    &__item
+        display: block
+        text-align: center
+        color: var(--text-dark-color)
+        padding: 10px
+        border-radius: 10px
+        transition: 0.15s linear
+    &__item:hover
+        background-color: var(--color-viewed-notify)
+        box-shadow: 0 0 10px 3px var(--color-gray-bold)
+@keyframes leftToRight
+    from
+        width: 0%
+    to
+        width: 100%
+
+.list__item:hover::after
+    animation: 0.3s linear leftToRight
+    width: 100%
+
+.button
+    padding: 10px 16px
+    font-weight: 600
+    line-height: 24px
+    color: var(--text-light-color)
+    font-size: var(--font-normal)
+    border-radius: 10px
+    outline: none
+    border: none
+    font-family: 'Poppins'
+    cursor: pointer
+    background-color: transparent
+    margin: 0 10px
+
+    &-active
+        background-color: var(--color-white)
+        color: var(--text-dark-color)
+
+/* Right component */
+.right
+    display: flex
+    align-items: center
+
+    &__search
+        padding: 10px
+        background-color: var(--color-white)
+        color: var(--text-dark-color)
+        margin-right: 10px
+        cursor: pointer
+
+/* User component */
+.user
+    display: flex
+    align-items: center
+
+    & *
+        margin: 0 5px
+        font-size: var(--font-normal)
+        cursor: pointer
+
+    &__notify
+        position: relative
+        padding-left: 10px
+
+    &__notify::before
+        content: ""
+        height: 150%
+        width: 1px
+        background-color: var(--line-gray)
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateY(-12.5%)
+
+    &__notify-after
+        text-align: center
+        background-color: var(--color-red)
+        position: absolute
+        top: 0
+        right: 0
+        padding: 3px
+        font-size: 12px
+        transform: translate(50%, -30%)
+
+    &__main
+        display: flex
+        align-items: center
+        position: relative
+
+    &__name
+        text-decoration: underline
+
+    &__avatar
+        width: 50px
+        height: 50px
+        border-radius: 100%
+        object-fit: cover
+
+    &__menu
+        list-style: none
+        background-color: var(--color-white)
+        color: var(--text-dark-color)
+        position: absolute
+        padding: 0
+        top: 120%
+        right: 0
+        width: max-content
+        border-radius: 10px
+        box-shadow: 0 0 10px 3px var(--color-gray-bold)
+        z-index: 100
+
+.menu__item
+    color: var(--text-dark-color)
+    display: block
+    text-align: left
+    padding: 10px 30px
+    border-bottom: 1px solid var(--line-gray)
+    margin: 0
+
+    &:hover
+        background-color: var(--color-gray-bold)
+        transition: 0.15s linear
+
+    &:first-child
+        border-radius: 10px 10px 0 0
+
+    &:last-child
+        border: none
+        text-align: center
+        border-radius: 0 0 10px 10px
+
+/* UserNotify component */
+.notify__list
+    background-color: var(--color-white)
+    box-shadow: 0 0 10px 3px var(--color-gray-bold)
+    color: var(--text-dark-color)
+    border-radius: 10px
+    width: max-content
+    position: absolute
+    top: 170%
+    right: -100%
+    list-style: none
+    padding: 0
+    min-width: 300px
+    max-width: 600px
+    transform: translateX(10%)
+    z-index: 10000
+    &-item
+        margin: 0
+        display: block
+        color: var(--text-dark-color)
+
+.notify__header
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 0
+    border-bottom: 1px solid var(--color-gray-bold)
+    span:hover
+        color: var(--color-viewed-notify)
+
+.notify__footer
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 10px 0
+    border-top: 1px solid var(--color-gray-bold)
+
+.notify__body
+    max-height: 500px
+    overflow-y: scroll
+.notify__item
+    display: flex
+    text-align: start
+    align-items: center
+    padding: 5px 0
+    margin: 0
+    &-read
+        background-color: var(--color-viewed-notify)
+
+    & .item__thumb
+        width: 30px
+        height: 30px
+        border-radius: 100%
+        object-fit: cover
+
+    & .item__body
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        div:nth-child(1)
+            font-weight: bold
+        div:nth-child(3)
+            color: var(--text-blur)
+    &:hover
+        background-color: var(--color-viewed-notify)
+        transition: 0.2s linear

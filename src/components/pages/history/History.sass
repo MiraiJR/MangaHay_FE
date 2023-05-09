@@ -1,0 +1,27 @@
+.history
+    margin-top: 30px
+
+.cardcomichistory
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    color: var(--text-light-color)
+    position: relative
+    &__thumb
+        img
+            width: 100%
+            object-fit: cover
+            object-position: center center
+
+.button-delete
+    background-color: var(--color-red)
+    position: absolute
+    top: 0
+    right: 0
+    margin-top: 10px
+    transition: 0.1s linear
+    &:hover
+        box-shadow: 0 0 10px 3px var(--color-white)
+    span
+        margin-left: 5px

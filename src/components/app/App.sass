@@ -1,0 +1,17 @@
+.movetotop
+    margin: 50px
+    position: fixed
+    bottom: 0
+    right: 0
+    cursor: pointer
+    transition: 0.3s linear
+    img
+        width: 100px
+    &:hover
+        animation: rotation 2s infinite linear
+@keyframes rotation
+    from
+        transform: rotate(0deg)
+
+    to
+        transform: rotate(359deg)

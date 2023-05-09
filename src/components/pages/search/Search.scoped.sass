@@ -1,0 +1,83 @@
+.searchpage
+    margin-top: 30px
+
+.formsearch
+    color: var(--text-light-color)
+    display: flex
+    align-items: center
+    background-color: var(--color-orange)
+    padding: 3px
+    &__input
+        padding: 10px
+        width: 89%
+        outline: none
+        border: none
+        margin-right: 10px
+    &__input:focus
+        box-shadow: 0 0 3px 1px var(--color-orange)
+    div
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-items: center
+        span
+            margin-left: 10px
+
+.searchoptional
+    color: var(--text-light-color)
+    width: fit-content
+    display: flex
+    align-items: center
+    justify-content: right
+    margin: 15px 0
+    cursor: pointer
+    span
+        margin-left: 10px
+
+// search advanced
+.searchadvanced
+    &__left
+        position: relative
+        color: var(--text-light-color)
+        div
+            display: flex
+            flex-direction: column
+            align-items: left
+            label
+                padding: 20px 0
+            input
+                width: inherit
+                margin-right: 0
+                border: 2px solid var(--color-orange)
+            select
+                margin-right: 0
+                border: 2px solid var(--color-orange)
+                width: 100%
+
+    &__left::after
+        content: ""
+        padding: 1px
+        height: 100%
+        background-color: var(--color-gray-bold)
+        position: absolute
+        top: 0
+        right: -2%
+
+    &__right
+        color: var(--text-light-color)
+        div:nth-child(1)
+            padding: 10px
+            font-weight: 600
+        div:nth-child(2)
+            div
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                input:checked + label
+                    color: var(--color-orange)
+.resultsearch-no
+    width: 100%
+    padding: 20px 0
+    font-weight: 600
+    text-align: center
+    color: var(--text-light-color)
